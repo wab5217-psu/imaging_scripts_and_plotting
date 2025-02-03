@@ -9,7 +9,7 @@ from vel_col_cmap import vel_col
 from pwr_col_cmap import pwr_col
 from median_filter import medianFilter
 from date_strings import cnv_datetimestr_dtlist
-from mag_continents import magContinents
+#from mag_continents import magContinents
 
 from subsolar import subSolarPoint
 
@@ -222,12 +222,13 @@ if np.abs(max_lon-min_lon) > 270:
 
 
 
-if mag:
-    magContinents(ax,boundary=True,alpha=.6)
-else:
+#if mag:
+#    magContinents(ax,boundary=True,alpha=.6)
+#else:
 #    ax.add_feature(cfeature.OCEAN,alpha=.6)
-    ax.add_feature(cfeature.LAND.with_scale('50m'), edgecolor='black',fc='none')
-    ax.gridlines()
+
+ax.add_feature(cfeature.LAND.with_scale('50m'), edgecolor='black',fc='none')
+ax.gridlines()
 
 
 from date_strings import make_date_time_str
